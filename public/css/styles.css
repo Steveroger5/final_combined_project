@@ -3,6 +3,7 @@ body{
   padding: 0;
     font-family:"Ubuntu";
     background-color:#f8f9fa;
+    background-image: url('/images/gplay.png');
 }
 h3{
     font-family:"Ubuntu";

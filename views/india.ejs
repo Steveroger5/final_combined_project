@@ -21,7 +21,7 @@
 <body>
 
   <section id="navbar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin:0 8% 0 8%;">
       <a class="navbar-brand" href="#" style="font-size:2rem;"><div class="top-title">C<i class="fas fa-virus"></i>VID-19 Tracker</div></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -45,48 +45,50 @@
 
 
 
-  <section id="top">
-    <div class="container">
+  <section id="top" style="margin:0% 8% 2% 8%;">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-8 col-md-8 col-sm-12">
+        <div class="col-lg-8 col-md-8 col-sm-12" style="padding:2%;text-align:center">
           <span>
             <h3>Coronavirus cases - India</h3>
           </span>
           <p><%=india_data.lastOriginUpdate%></p>
-          <div class="row">
-            <div class="col-lg-4 col-md-4 sm-12">
-              <div class="card shadow" style="max-width: 18rem;border-left: 5px solid #4e73df;">
-                <div class="card-title">
+          <div class="row" style="padding:2% 0% 2% 0;">
+
+            <div class="col-lg-4 col-md-4 sm-12" style="padding:2%;">
+              <div class="card shadow" style="max-width: auto;border-left: 5px solid #4e73df;padding:5%;">
+                <div class="card-title" >
                   <strong>CONFIRMED</strong>
                 </div>
                 <%=india_data[0].confirmed%>
               </div>
             </div>
-            <div class="col-lg-4 col-md-4 sm-12">
-              <div class="card shadow" style="max-width: 18rem;border-left: 5px solid #1cc88a;">
+            <div class="col-lg-4 col-md-4 sm-12" style="padding:2%;">
+              <div class="card shadow" style="max-width: auto;border-left: 5px solid #1cc88a;padding:5%;">
                 <div class="card-title" >
                   <strong>RECOVERED</strong>
                 </div>
                 <%=india_data[0].recovered%>
               </div>
             </div>
-            <div class="col-lg-4 col-md-4 sm-12">
-              <div class="card shadow" style="max-width: 18rem;border-left: 5px solid #e74a3b;">
+            <div class="col-lg-4 col-md-4 sm-12" style="padding:2%;">
+              <div class="card shadow" style="max-width: auto;border-left: 5px solid #e74a3b;padding:5%;">
                 <div class="card-title">
                   <strong>DEATHS</strong>
                 </div>
                 <%=india_data[0].deaths%>
               </div>
             </div>
+
           </div>
-          <div class="row sample-box" style="margin:5% 0;">
+          <div class="row sample-box" style="padding:5%;">
             <div class="col">
               <div class="card shadow">
                 <div class="card-body">
                 <strong><%= india_data_tested[india_data_tested.length-1].totalsamplestested %></strong> samples have been tested as of <%=india_data_tested[india_data_tested.length-1].updatetimestamp%>.
 
                 <div class="button-updates" style="margin-top:3%">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">COVID-19 LATEST UPDATES<i class="fas fa-rss" style="margin:10px;"></i></button>
+                  <button type="button" class="btn btn-lg btn-outline-danger" data-toggle="modal" data-target=".bd-example-modal-lg" style="border:3px solid  #e74a3b;">COVID-19 LATEST UPDATES<i class="fas fa-rss" style="margin:10px;"></i></button>
                   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                       <div class="modal-content" style="background-color:#f8f9fa;">
@@ -108,22 +110,22 @@
             </div>
           </div>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-12">
-        <h4><center>Effect Of Covid-19 on INDIA</center></h4>
+      <div class="col-lg-4 col-md-4 col-sm-12" style="padding:2%;">
+        <h4 style="padding:2%;"><center>Effect Of Covid-19 on INDIA</center></h4>
         <canvas id="myChart" class="shadow" width="300" height="300"></canvas>
       </div>
       </div>
     </div>
   </section>
 
-<section id="india-state">
+<section style="margin:1% 8% 1% 8%;">
   <div class="container-fluid">
     <center>
     <div class="row">
       <div class="col-lg-6">
         <h3>State Wise Count</h3>
         <p>Click On The  <i class="fas fa-plus-circle" style="color:red;"></i>   to Get Respective Distrit-Wise Data</p>
-        <div class="card" style="width:auto;height: 618px;display: inline-block;overflow-y: scroll;">
+        <div class="card" style="width:auto;height: 600px;display: inline-block;overflow-y: scroll;">
           <div class="card-body" style="width:auto;border-left:5px solid #1cc88a;">
             <table class="table table-sm">
               <thead>
@@ -131,7 +133,7 @@
                   <th scope="col"></th>
                   <th scope="col">State</th>
                   <th scope="col">Confirmed</th>
-                  <th scope="col">Active Cases</th>
+                  <th scope="col">Active_Cases</th>
                   <th scope="col">Recovered</th>
                   <th scope="col">Deaths</th>
                 </tr>
@@ -168,21 +170,21 @@
   </div>
 </section>
 
-<section id="top10">
-  <div class="container">
+<section id="top10" style="margin:2% 8% 2% 8%;">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-12">
         <section id="top10">
-              <center><h3>Top 10 states Affected By COVID-19</h3></center>
-            <div class="card shadow" >
+              <center><h3 style="padding-bottom:2%;">Top 10 states Affected By COVID-19</h3></center>
+            <div class="card shadow" style="border-left:5px solid #e74a3b;">
               <canvas id="myChart3" width="300" height="300"></canvas>
             </div>
         </section>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-12">
         <section id="timeline">
-          <center><h3>Timeline of Cases in India</h3></center>
-        <div class="card shadow" >
+          <center><h3 style="padding-bottom:2%;">Timeline of Cases in India</h3></center>
+        <div class="card shadow" style="width:auto;border-left:5px solid rgba(255, 206, 86, 0.6);" >
           <canvas id="myChart4" width="300" height="300"></canvas>
         </div>
           </section>
@@ -192,13 +194,10 @@
 </section>
 
 
-
-
-
-<section id="PositiveVsTested">
-  <div class="container">
-    <center><h3>Total Positive Cases VS Total Sample Tested</h3></center>
-    <div class="card shadow">
+<section id="PositiveVsTested" style="margin:1% 8% 2% 8%;">
+  <div class="container-fluid">
+    <center><h3 style="padding:2%;">Total Positive Cases VS Total Sample Tested</h3></center>
+    <div class="card shadow" style="border-left:5px solid #1cc88a;">
       <canvas id="myChart5" width="400" height="600"></canvas>
     </div>
   </div>
@@ -222,9 +221,9 @@
       labels: ["Confirmed","Recovered","Deaths"],
       datasets: [{
         backgroundColor: [
-          "#3498db",
-          "#2ecc71",
-          "#e74c3c"
+         'rgba(255, 206, 86, 0.6)',
+         'rgba(75, 192, 192, 0.6)',
+         'rgba(255, 99, 132, 0.6)'
         ],
         data: [<%=india_data[0].confirmed%>,<%=india_data[0].recovered%>,<%=india_data[0].deaths%>,]
       }]
@@ -247,8 +246,8 @@
             <%}%>
             ], // Specify the data values array
             fill: false,
-            borderColor: '#2196f3', // Add custom color border (Line)
-            backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+            borderColor:    'rgba(255, 159, 64, 0.6)', // Add custom color border (Line)
+            backgroundColor:   'rgba(255, 159, 64, 0.6)', // Add custom color background (Points and Fill)
             borderWidth: 1 // Specify bar border width
         },
         {
@@ -257,8 +256,8 @@
             <%=india_data[i].recovered%>,
           <%}%>], // Specify the data values arraya
           fill: false,
-          borderColor: '#4CAF50', // Add custom color border (Line)
-          backgroundColor: '#4CAF50', // Add custom color background (Points and Fill)
+          borderColor:   'rgba(75, 192, 192, 0.6)', // Add custom color border (Line)
+          backgroundColor:    'rgba(75, 192, 192, 0.6)',// Add custom color background (Points and Fill)
           borderWidth: 1 // Specify bar border width
         },
         {
@@ -267,8 +266,8 @@
             <%=india_data[i].deaths%>,
           <%}%>], // Specify the data values array
           fill: false,
-          borderColor: 'red', // Add custom color border (Line)
-          backgroundColor: 'red', // Add custom color background (Points and Fill)
+          borderColor: 'rgba(255, 99, 132, 0.6)', // Add custom color border (Line)
+          backgroundColor:  'rgba(255, 99, 132, 0.6)', // Add custom color background (Points and Fill)
           borderWidth: 1 // Specify bar border width
         }]
     },
@@ -294,8 +293,8 @@
             <%}%>
             ], // Specify the data values array
             fill: false,
-            borderColor: '#2196f3', // Add custom color border (Line)
-            backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+            borderColor: 'rgba(255, 99, 132, 0.6)', // Add custom color border (Line)
+            backgroundColor: 'rgba(255, 99, 132, 0.6)', // Add custom color background (Points and Fill)
             borderWidth: 0.3 // Specify bar border width
         },
         {
@@ -306,7 +305,7 @@
           fill: false,
           borderColor: '#4CAF50', // Add custom color border (Line)
           backgroundColor: '#4CAF50', // Add custom color background (Points and Fill)
-          borderWidth: 0.3 // Specify bar border width
+          borderWidth: 1 // Specify bar border width
         }
         ]
     },
@@ -345,7 +344,7 @@
           }, {
             label: "Total Sample Tested",
             type: "bar",
-            backgroundColor: "rgba(0,0,0,0.7)",
+            backgroundColor:    '#7d4199',
             data: [<%for(var i=0;i<india_data_tested.length-1;i++){%>
               <%if(india_data_tested[i].totalpositivecases!=""&&india_data_tested[i].totalindividualstested!=""){%>
               <%=india_data_tested[i].totalindividualstested%>,

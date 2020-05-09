@@ -28,22 +28,7 @@
 <body>
   <!-- navbar -->
   <!-- Button trigger modal -->
-  <div id="myModal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title"><strong><center>STAY HOME.SAVE LIVES.</center></strong></h4>
-            </div>
-                <ol>
-                  <li><strong>STAY</strong> home</li>
-                  <li><strong>KEEP</strong> a safe distance</li>
-                  <li><strong>WASH</strong> hands often</li>
-                  <li><strong>COVER</strong> your cough</li>
-                  <li><strong>SICK?</strong> Call the helpline</li>
-                </ol>
-        </div>
-    </div>
-</div>
+
 
     <section id="navbar">
       <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin:0 8% 0 8%;">
@@ -73,28 +58,28 @@
     <div class="row">
 
       <div class="col-lg-8 col-md-12 col-sm-12">
-        <br><br>
+      <br><br>
               <h3 class="top-heading">Coronavirus cases - Global</h3>
             <span style="color:grey;">Last updated: <%=forindia.Date%></span>
             <div class="row" style="padding:2%;">
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <div class="card" style="max-width: 18rem;border-left: 5px solid #4e73df;padding-top:4%;">
+          <div class="col-lg-4 col-md-4 col-sm-12" style="padding:2%;">
+            <div class="card" style="max-width: auto;border-left: 5px solid #4e73df;padding-top:4%;">
 
                 <h5 class="card-title">Confirmed</h5>
                 <p><%=global_top_card_data.cases%><sup>[+<%=global_top_card_data.todayCases%>]</sup></p>
 
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <div class="card" style="max-width: 18rem;border-left:5px solid #1cc88a;padding-top:4%;">
+          <div class="col-lg-4 col-md-4 col-sm-12" style="padding:2%;">
+            <div class="card" style="max-width: auto;border-left:5px solid #1cc88a;padding-top:4%;">
 
                 <h5 class="card-title">Recovered</h5>
                 <p><%=global_top_card_data.recovered%></p>
 
           </div>
           </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <div class="card" style="max-width: 18rem;border-left:5px solid #e74a3b;padding-top:4%;">
+          <div class="col-lg-4 col-md-4 col-sm-12" style="padding:2%;">
+            <div class="card" style="max-width: auto;border-left:5px solid #e74a3b;padding-top:4%;">
 
                 <h5 class="card-title">Deaths</h5>
                 <p><%=global_top_card_data.deaths%><sup>[+<%=global_top_card_data.todayDeaths%>]</sup></p>
@@ -102,29 +87,29 @@
             </div>
           </div>
         </div>
-        <br><br>
+        <br>
             <h3 > Coronavirus cases - India</h3>
               <span style="color:grey;">Last updated: <%=forindia.Date%></span>
 
         <div class="row" style="padding:2%;">
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <div class="card" style="max-width: 18rem;border-left: 5px solid #4e73df;padding-top:4%;">
+          <div class="col-lg-4 col-md-4 col-sm-12" style="padding:2%;">
+            <div class="card" style="max-width: auto;border-left: 5px solid #4e73df;padding-top:4%;">
 
                 <h5 class="card-title">Confirmed</h5>
                 <p><%=india_top_card_data_new.cases%><sup>[+<%=india_top_card_data_new.todayCases%>]</sup></p>
 
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <div class="card" style="max-width: 18rem;border-left:5px solid #1cc88a;padding-top:4%;">
+          <div class="col-lg-4 col-md-4 col-sm-12" style="padding:2%;">
+            <div class="card" style="max-width: auto;border-left:5px solid #1cc88a;padding-top:4%;">
 
                 <h5 class="card-title">Recovered</h5>
                 <p><%=india_top_card_data_new.recovered%></p>
 
           </div>
           </div>
-          <div class="col-lg-4 col-md-4 col-sm-12" >
-            <div class="card" style="max-width: 18rem;border-left:5px solid #e74a3b;padding-top:4%;">
+          <div class="col-lg-4 col-md-4 col-sm-12" style="padding:2%;">
+            <div class="card" style="max-width: auto;border-left:5px solid #e74a3b;padding-top:4%;">
 
                 <h5 class="card-title">Deaths</h5>
                 <p><%=india_top_card_data_new.deaths%><sup>[+<%=india_top_card_data_new.todayDeaths%>]</sup></p>
@@ -143,7 +128,7 @@
         </center>
           <div class="card" style="max-width: auto;border-left:5px solid blue;">
             <div class="card-body">
-              <canvas id="myChart" width=auto; height=295px;></canvas>
+              <canvas id="myChart" width=auto; height=300px;></canvas>
             </div>
           </div>
         </div>
