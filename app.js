@@ -134,7 +134,7 @@ app.get("/india", function(req, res) {
       //     return [Number(key), district_modal_data[key]];
       // });
       // console.log(result);
-      axios.get(url4).then(function(response){
+      axios.get(url5).then(function(response){
           modal_data=(response.data);
           axios.get(url3).then(function(response){
               district_data=(response.data.statewise);
